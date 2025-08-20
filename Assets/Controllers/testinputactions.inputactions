@@ -1,0 +1,55 @@
+{
+    "version": 1,
+    "name": "testinputactions",
+    "maps": [
+        {
+            "name": "Mole",
+            "id": "08d4e72f-049c-4f7b-8939-1be61bff0241",
+            "actions": [
+                {
+                    "name": "togglemole",
+                    "type": "Button",
+                    "id": "728b1a86-a3f5-4ea4-93f2-4f2b9c711028",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "clicked",
+                    "type": "Button",
+                    "id": "5ce6fdca-fa3c-4cca-975b-77228943cfea",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "eba05daa-0184-4676-ab63-b0093d6cd760",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "togglemole",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e57dabf7-ffec-4183-9d37-a81b1754612d",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "clicked",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
