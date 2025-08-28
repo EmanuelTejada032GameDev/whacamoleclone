@@ -20,8 +20,13 @@ public class Mole : MonoBehaviour
     [SerializeField] private HealthSystem _healthSystem;
 
     // Architecture events (needed by Hole script)
-    public event Action OnMoleKilled;
+    public event EventHandler<OnMoleKilledEventData> OnMoleKilled;
     public event Action OnMoleTimedOut;
+
+    public class OnMoleKilledEventData
+    {
+        public int scoreValue;
+    }
 
     // Architecture state
     private Hole parentHole;
@@ -35,6 +40,9 @@ public class Mole : MonoBehaviour
 
     [Header("Hit Detection")]
     [SerializeField] private float hitThreshold = 0.05f;
+
+
+    [SerializeField] private int scoreValue = 0;
 
     public bool CanBeHit => isActive && isVisible &&
                         Vector3.Distance(transform.position, visiblePosition) <= hitThreshold;
@@ -58,6 +66,12 @@ public class Mole : MonoBehaviour
     {
         HandleDeath();
     }
+
+    public void SetScoreValue(int scoreValue)
+    {
+        this.scoreValue = scoreValue;
+    }
+
 
     // Your original Update - animation system
     private void Update()
@@ -170,7 +184,7 @@ public class Mole : MonoBehaviour
             audioSource.PlayOneShot(deathSound);
 
         // Notify hole immediately
-        OnMoleKilled?.Invoke();
+        OnMoleKilled?.Invoke(this, new OnMoleKilledEventData { scoreValue = scoreValue });
 
         // Destroy after brief delay to allow effects to play
         Destroy(gameObject, 0.2f);
@@ -185,7 +199,7 @@ public class Mole : MonoBehaviour
             yield return null;
         }
 
-        OnMoleKilled?.Invoke();
+        //OnMoleKilled?.Invoke();
     }
 
     private void OnDestroy()

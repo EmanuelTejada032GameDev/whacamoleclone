@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86eab12b6650cba4c8ef111779241b3d, type: 3}
+  m_Name: SM_Chr_Builder_Harness_01
+  m_EditorClassIdentifier: Assembly-CSharp::MoleConfig
+  moleName: SM_Chr_Builder_Harness_01
+  moleModel: {fileID: 101127365053969466, guid: 4df7d3fbd091bc142846b7f3132a9bab, type: 3}
+  maxHealth: 4
+  scoreValue: 25
