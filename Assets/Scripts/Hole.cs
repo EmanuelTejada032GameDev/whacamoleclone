@@ -17,7 +17,7 @@ public class Hole : MonoBehaviour
 
     // Events
     public event Action OnMoleCompleted;
-    public event Action OnMoleKilled;
+    public event Action<int> OnMoleKilled;
 
     // State
     private Mole currentMole;
@@ -92,8 +92,9 @@ public class Hole : MonoBehaviour
     {
         isOccupied = false;
         CreateMole();
-        OnMoleKilled?.Invoke();
+        OnMoleKilled?.Invoke(e.scoreValue); 
     }
+
 
     private void HandleMoleTimedOut()
     {

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MoleConfig
   moleName: SM_Chr_Builder_Harness_01
   moleModel: {fileID: 101127365053969466, guid: 4df7d3fbd091bc142846b7f3132a9bab, type: 3}
-  maxHealth: 4
-  scoreValue: 25
+  maxHealth: 8
+  scoreValue: 250
