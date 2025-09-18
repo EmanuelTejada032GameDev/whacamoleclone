@@ -18,10 +18,8 @@ public class RewardCard : MonoBehaviour
         rewardIcon.sprite = reward.icon;
         rewardDescriptionText.SetText(reward.description);
 
-        // Show the reward card UI
         gameObject.SetActive(true);
 
-        // Add listeners to the buttons
         takeButton.onClick.RemoveAllListeners();
         takeButton.onClick.AddListener(ApplyReward);
 
@@ -31,19 +29,15 @@ public class RewardCard : MonoBehaviour
 
     private void ApplyReward()
     {
-        // Apply the reward
         GameManager.Instance.ApplyReward(currentReward);
 
-        // Hide the reward card UI
         gameObject.SetActive(false);
     }
 
     private void DeclineReward()
     {
-        // Hide the reward card UI without applying the reward
         gameObject.SetActive(false);
 
-        // Optionally, you can log or handle the declined reward here
         Debug.Log("Reward declined by the player.");
     }
 }

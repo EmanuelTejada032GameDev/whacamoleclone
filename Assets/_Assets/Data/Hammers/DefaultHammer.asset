@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HammerData
   hammerName: DefaultHammer
   damage: 2
-  speed: 3
+  speed: 1
   hammerModel: {fileID: 4118790228451632, guid: 981d75f5d4ad7be4bbf819361ad1fa3d, type: 3}

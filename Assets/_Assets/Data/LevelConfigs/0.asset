@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 0
   m_EditorClassIdentifier: Assembly-CSharp::LevelConfigSO
   Level: 0
-  PointsRequired: 200
+  PointsRequired: 850
   PosibleRewards:
   - {fileID: 11400000, guid: 8f8689dd5fdf9de40a29968ba457f19b, type: 2}
   - {fileID: 11400000, guid: f01ace348acd5dd429b3d4d8fadac68e, type: 2}
